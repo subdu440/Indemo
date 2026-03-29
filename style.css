@@ -10,6 +10,8 @@ body {
  
 }
 
+/*nav section start*/
+
 .navber {
  
 width: 100%; 
@@ -43,7 +45,9 @@ li a {
  
 }
 
+/*nav section end*/
 
+/*home section start*/
 
 #logo {
  width: 80px; 
@@ -57,6 +61,7 @@ border: inset 5px rebeccapurple;
  justify-content: center;
  
 }
+
 
 .text {
 width: 96%; 
@@ -83,5 +88,51 @@ font-family: monospace;
  font-family: georgia;
  
 }
+/*home section end*/
 
+/* app section start*/
+
+.appbox {
+ width: 96%;
+ height: 490px;
+ 
+ margin: 0 auto;
+ 
+ 
+ 
+}
+
+.icons {
+ width: 75px;
+ height: 75px;
+ 
+ border-radius: 20px;
+ margin-top: 5px;
+ border: groove 5px #D817BD;
+}
+
+.icons:hover {
+ width: 90px;
+ height: 90px;
+ 
+}
+
+#vid {
+ border: #C398E0 5px double ;
+ border-radius: 50%;
+ 
+}
+#call{
+ border: #E2E7DC 5px solid;
+ border-radius: 30%;
+ 
+}
+
+.typ {
+ color: #FFFFFF;
+ text-align: center;
+ margin-top: 4px;
+ font-family: fantasy;
+ font-weight: bold;
+}
 
