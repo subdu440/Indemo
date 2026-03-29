@@ -57,3 +57,31 @@ border: inset 5px rebeccapurple;
  justify-content: center;
  
 }
+
+.text {
+width: 96%; 
+height: 300px;
+background: linear-gradient(#F3F3F4,#F4E3E3,#E3C0E3) ;
+ margin: 0 auto;
+ border-radius: 20px;
+ 
+ border: double 9px ;
+ 
+}
+
+#abc {
+text-align: center; 
+margin-top: 7px;
+font-size: 24px;
+font-family: monospace;
+ 
+}
+
+#efg {
+ padding: 5px;
+ text-align: center;
+ font-family: georgia;
+ 
+}
+
+
