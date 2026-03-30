@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>calling</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    
+    <style>
+    body {
+     background-image: url(conbg.jpg);   
+     background-size: 100% 650px;
+        
+    }
+    /*#contact-no {
+        border-radius: 30px;
+        border: inset #404DE0;
+       
+    }*/
+    
+        .phone-dialpad {
+    width: 290px;
+    height: 430px;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 10px;
+    /*background-color: #f9f9f9;*/
+   background: linear-gradient(#1B031A,#E5C9E4,#F19EED,#B67DF1);
+   
+    margin-top: 240px;
+}
+
+#numberDisplay {
+    width: 92%;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    text-align: center;
+    border-radius: 30px;
+}
+
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.digit,  #backspace, #callButton {
+    padding: 15px;
+    font-size: 1.1em;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 20%;
+    background-color: #fff;
+    transition: background-color 0.2s;
+}
+
+.digit:hover, #backspace:hover, #callButton:hover {
+    background-color: #e9e9e9;
+    border: #88B578 1px solid;
+}
+
+#callButton {
+    background-color: #4CAF50;
+    color: white;
+    grid-column: span 3; /* Centers the call button */
+    width: 100px;
+    border-radius: 50px;
+    margin: 0 auto;
+}
+
+#callButton:hover {
+    background-color: #45a049;
+    
+ ;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #552525;
+    font-family: fantasy;
+    
+}
+
+    </style>
+</head>
+
+
+<body >
+    
+   <!--<img src="maa.jpg" alt="contact-no" width="100%" height="70px" id="contact-no" />
+    <img src="baba.jpg" alt="contact-no" width="100%" height="70px" id="contact-no"/>
+    <img src="freind.jpg" alt="contact-no"  width="100%"  height="70px" id="contact-no"/>-->
+    
+    <div class="phone-dialpad">
+    <input type="tel" id="numberDisplay" maxlength= "10" placeholder="10 digit Number"
+    readonly >
+  
+    <div class="keypad">
+        
+        
+        <button class="digit" data-sound="cell.mp3">1</button>
+        <button class="digit"
+        data-sound="cell.mp3">2</button>
+        <button class="digit"
+        data-sond="cell.mp3">3</button>
+        <button class="digit"
+        data-sond="cell.mp3">4</button>
+        <button class="digit"
+        data-sond="cell.mp3">5</button>
+        <button class="digit"
+        data-sond="cell.mp3">6</button>
+        <button class="digit"
+        data-sond="cell.mp3">7</button>
+        <button class="digit"
+        data-sond="cell.mp3">8</button>
+        <button class="digit"
+        data-sond="cell.mp3">9</button>
+        <button class="digit" data-sond="cell.mp3">*</button>
+        <button class="digit"
+        data-sond="cell.mp3">0</button>
+        <button class="digit"
+        data-sond="cell.mp3">#</button>
+        <button id="backspace" >⌫</button>
+          <button id="backspace" style="visibility: hidden;"></button
+          
+          <button id="backspace" ><a href="index-app.html">back</a></button>
+          
+        <button id="callButton"><i class="fa-solid fa-phone"></i></button>
+    </div>
+</div>
+<script>
+ document.addEventListener('DOMContentLoaded', () => {
+    const numberDisplay = document.getElementById('numberDisplay');
+    const digits = document.querySelectorAll('.digit');
+    const backspace = document.getElementById('backspace');
+    const callButton = document.getElementById('callButton');
+
+    // Add event listeners for digit buttons
+    digits.forEach(button => {
+        button.addEventListener('click', () => {
+            numberDisplay.value += button.textContent;
+        });
+    });
+
+    // Add event listener for the backspace button
+    backspace.addEventListener('click', () => {
+        numberDisplay.value = numberDisplay.value.slice(0, -1);
+    });
+
+    // Add event listener for the call button
+    callButton.addEventListener('click', () => {
+        const phoneNumber = numberDisplay.value;
+        if (phoneNumber) {
+            // Initiates a phone call on supported devices
+            window.location.href = `tel:${phoneNumber}`;
+            // Alternative method: window.open(`tel:${phoneNumber}`, '_self');
+        } else {
+            alert('Please enter a phone number.');
+        }
+    });
+});
+</script>
+
+<script type="text/javascript" charset="utf-8">
+    const digits = document.querySelectorAll('.digit');
+
+digits.forEach(button => {
+  button.addEventListener('click', () => {
+    // Replace with your sound file path
+    const audio = new Audio('cell.mp3'); 
+    audio.play();
+  });
+});
+
+</script>
+</body>
+</html>
