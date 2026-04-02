@@ -110,22 +110,24 @@ font-family: monospace;
 
 .conbox {
  display: flex;
- justify-content: center;
+ justify-content: center
+
+ 
  
 }
 
 .icons {
- width: 75px;
- height: 75px;
+ width: 65px;
+ height: 65px;
  text-align: center;
  border-radius: 20px;
- margin-top: 5px;
+ margin: 7px;
  border: groove 5px #D817BD;
 }
 
 .icons:hover {
- width: 80px;
- height: 80px;
+ width: 75px;
+ height: 75px;
  
 }
 
