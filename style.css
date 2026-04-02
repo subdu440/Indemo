@@ -61,7 +61,8 @@ border: inset 5px rebeccapurple;
 .di {
  display: flex;
  justify-content: center;
-  background-color: #49E441;
+  
+
 }
 
 
@@ -99,17 +100,24 @@ font-family: monospace;
  height: 490px;
  
  width: 100%;
- background: red;
+ 
   display: flex;
   justify-content: center;
- 
+  align-items: center;
+  flex-direction: column ;
+
+}
+
+.conbox {
+ display: flex;
+ justify-content: center;
  
 }
 
 .icons {
  width: 75px;
  height: 75px;
- 
+ text-align: center;
  border-radius: 20px;
  margin-top: 5px;
  border: groove 5px #D817BD;
