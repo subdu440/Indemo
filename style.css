@@ -19,7 +19,9 @@ height: 70px;
 background: linear-gradient(#D158DF, #935DEE,#52115A);
  margin-top: 2px;
  color: white;
- 
+ display: flex;
+ justify-content: center;
+ align-items: center;
  
  border-radius: 100px;
  font-size: large;
@@ -59,7 +61,7 @@ border: inset 5px rebeccapurple;
 .di {
  display: flex;
  justify-content: center;
- 
+  background-color: #49E441;
 }
 
 
@@ -96,8 +98,10 @@ font-family: monospace;
  width: 96%;
  height: 490px;
  
- margin: 0 auto;
- 
+ width: 100%;
+ background: red;
+  display: flex;
+  justify-content: center;
  
  
 }
